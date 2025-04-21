@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             image 'mvn-java17:v1' 
+            args '--user root -v /var/run/docker.sock:/var/run/docker.sock'
         }
     }
     stages{
